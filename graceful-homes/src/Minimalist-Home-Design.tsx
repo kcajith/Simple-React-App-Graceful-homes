@@ -42,7 +42,7 @@ return (
 <div
 className="absolute inset-0 bg-cover bg-center"
 style={{
-backgroundImage: `url(https://readdy.ai/api/search-image?query=luxurious%20home%20interior%20with%20open%20concept%20design%2C%20large%20windows%20with%20natural%20light%2C%20elegant%20furniture%2C%20neutral%20color%20palette%2C%20wooden%20floors%2C%20high%20ceilings%2C%20indoor%20plants%2C%20architectural%20details%2C%20sophisticated%20and%20calm%20atmosphere&width=1440&height=600&seq=5&orientation=landscape)`,
+backgroundColor: `#F0EBE5`,
 opacity: 0.9
 }}
 ></div>
@@ -123,11 +123,6 @@ Learn More
 </Button>
 </div>
 <div className="w-full md:w-1/2 h-[400px] rounded-lg overflow-hidden">
-<img
-src="https://readdy.ai/api/search-image?query=interior%20designer%20working%20with%20client%2C%20discussing%20home%20design%20plans%2C%20fabric%20swatches%20and%20color%20palettes%20on%20table%2C%20elegant%20office%20setting%2C%20professional%20atmosphere%2C%20natural%20lighting%2C%20modern%20interior%20design%20studio&width=600&height=400&seq=6&orientation=landscape"
-alt="Interior designer consultation"
-className="w-full h-full object-cover object-top"
-/>
 </div>
 </div>
 </section>
@@ -245,31 +240,6 @@ Creating beautiful, functional spaces that reflect your unique style and persona
 <div className="p-6">
 <h2 className="font-serif text-2xl text-[#4A4A4A] mb-6">{selectedRoom}</h2>
 <div className="grid grid-cols-1 gap-4">
-{selectedRoom === "Living Room" && (
-<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-<div className="relative aspect-video md:col-span-2">
-<img
-src="https://static.readdy.ai/image/66a4088866625659f5b4911b13b334ec/55d671b829047a2dc5136940b9237d82.jfif"
-alt="Living Room Design"
-className="w-full h-full object-cover rounded-lg"
-/>
-</div>
-<div className="relative aspect-video">
-<img
-src="https://static.readdy.ai/image/66a4088866625659f5b4911b13b334ec/5f292856518b5bb3615b3ec1318ef81f.jfif"
-alt="Living Room Design"
-className="w-full h-full object-cover rounded-lg"
-/>
-</div>
-<div className="relative aspect-video">
-<img
-src="https://static.readdy.ai/image/66a4088866625659f5b4911b13b334ec/9e99d5ab02bb578bde53605b07dbc1f0.jfif"
-alt="Living Room Design"
-className="w-full h-full object-cover rounded-lg"
-/>
-</div>
-</div>
-)}
 </div>
 </div>
 </DialogContent>
