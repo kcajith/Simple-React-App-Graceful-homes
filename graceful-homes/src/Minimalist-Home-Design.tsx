@@ -1,8 +1,8 @@
 // The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
 import React, { useState } from 'react';
-import { Button } from "./components/ui/button";
-import { Card } from "./components/ui/card";
-import { Dialog, DialogContent } from "./components/ui/dialog";
+import { Button } from "../../components/ui/button";
+import { Card } from "../../components/ui/card";
+import { Dialog, DialogContent } from "../../components/ui/dialog";
 const App: React.FC = () => {
 const [showGallery, setShowGallery] = useState(false);
 const [selectedRoom, setSelectedRoom] = useState<string | null>(null);
