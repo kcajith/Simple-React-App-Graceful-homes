@@ -64,11 +64,11 @@ Our Design Categories
 <p className="text-center text-[#6A6A6A] max-w-2xl mx-auto mb-12">
 Explore our curated collection of interior designs for every room in your home. Each space is thoughtfully crafted to blend elegance with functionality.
 </p>
-<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 {rooms.map((room, index) => (
 <Card
 key={index}
-className="group relative h-80 overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer"
+className="group relative h-96 overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer"
 onClick={() => handleRoomClick(room.title)}
 >
 <div className="absolute inset-0 bg-black/30 z-10 transition-opacity duration-300 group-hover:bg-black/20"></div>
