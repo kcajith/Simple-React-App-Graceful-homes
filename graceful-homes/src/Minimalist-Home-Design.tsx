@@ -3,6 +3,11 @@ import React, { useState } from 'react';
 import { Button } from "../../components/ui/button";
 import { Card } from "../../components/ui/card";
 import { Dialog, DialogContent } from "../../components/ui/dialog";
+import livingRoomImage from './assets/Living.jpg';
+import bedRoomImage from './assets/Bedroom.jpg';
+import kitchenImage from './assets/Kitchen.jpg';
+import bathroomImage from './assets/Bathroom.jpg';
+
 const App: React.FC = () => {
 const [showGallery, setShowGallery] = useState(false);
 const [selectedRoom, setSelectedRoom] = useState<string | null>(null);
@@ -14,19 +19,19 @@ setShowGallery(true);
 const rooms = [
 {
 title: "Living Room",
-imageUrl: "https://github.com/kcajith/Simple-React-App-Graceful-homes/blob/main/graceful-homes/src/assets/Living.jpg",
+imageUrl: livingRoomImage,
 },
 {
 title: "Bed Room",
-imageUrl: "https://github.com/kcajith/Simple-React-App-Graceful-homes/blob/main/graceful-homes/src/assets/Bedroom.jpg",
+imageUrl: bedRoomImage,
 },
 {
 title: "Kitchen",
-imageUrl: "https://github.com/kcajith/Simple-React-App-Graceful-homes/blob/main/graceful-homes/src/assets/Kitchen.jpg",
+imageUrl: kitchenImage,
 },
 {
 title: "Bathroom",
-imageUrl: "https://github.com/kcajith/Simple-React-App-Graceful-homes/blob/main/graceful-homes/src/assets/Bathroom.jpg",
+imageUrl: bathroomImage,
 },
 ];
 return (
