@@ -77,10 +77,11 @@ className="group relative h-96 overflow-hidden rounded-lg shadow-md transition-a
 onClick={() => handleRoomClick(room.title)}
 >
 <div className="absolute inset-0 bg-black/30 z-10 transition-opacity duration-300 group-hover:bg-black/20"></div>
-<div
-className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-style={{ backgroundImage: `url(${room.imageUrl})` }}
-></div>
+<img
+src={room.imageUrl}
+alt={room.title}
+className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+/>
 <div className="absolute inset-0 flex items-center justify-center z-20">
 <h3 className="font-serif text-3xl text-white font-medium tracking-wide transition-all duration-300 group-hover:scale-110 group-hover:text-[#FAFAFA]">
 {room.title}
