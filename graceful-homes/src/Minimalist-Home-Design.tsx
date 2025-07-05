@@ -14,19 +14,19 @@ setShowGallery(true);
 const rooms = [
 {
 title: "Living Room",
-imageUrl: "https://readdy.ai/api/search-image?query=elegant%20modern%20living%20room%20with%20minimalist%20furniture%2C%20soft%20natural%20lighting%2C%20neutral%20color%20palette%2C%20large%20windows%2C%20wooden%20accents%2C%20plush%20sofa%2C%20decorative%20pillows%2C%20coffee%20table%20with%20design%20books%2C%20indoor%20plants%2C%20high-end%20interior%20design&width=600&height=400&seq=1&orientation=landscape",
+imageUrl: "https://github.com/kcajith/Simple-React-App-Graceful-homes/blob/main/graceful-homes/src/assets/Living.jpg",
 },
 {
 title: "Bed Room",
-imageUrl: "https://readdy.ai/api/search-image?query=luxurious%20bedroom%20with%20king-size%20bed%2C%20premium%20bedding%2C%20soft%20neutral%20colors%2C%20bedside%20tables%20with%20elegant%20lamps%2C%20large%20windows%20with%20sheer%20curtains%2C%20plush%20carpet%2C%20minimalist%20decor%2C%20morning%20light%20streaming%20in%2C%20peaceful%20atmosphere&width=600&height=400&seq=2&orientation=landscape",
+imageUrl: "https://github.com/kcajith/Simple-React-App-Graceful-homes/blob/main/graceful-homes/src/assets/Bedroom.jpg",
 },
 {
 title: "Kitchen",
-imageUrl: "https://readdy.ai/api/search-image?query=modern%20kitchen%20with%20marble%20countertops%2C%20high-end%20appliances%2C%20wooden%20cabinets%2C%20island%20with%20bar%20stools%2C%20pendant%20lighting%2C%20open%20shelving%20with%20minimalist%20dishware%2C%20indoor%20herbs%2C%20natural%20light%2C%20clean%20lines%2C%20sophisticated%20design&width=600&height=400&seq=3&orientation=landscape",
+imageUrl: "https://github.com/kcajith/Simple-React-App-Graceful-homes/blob/main/graceful-homes/src/assets/Kitchen.jpg",
 },
 {
 title: "Bathroom",
-imageUrl: "https://readdy.ai/api/search-image?query=luxury%20bathroom%20with%20freestanding%20bathtub%2C%20walk-in%20shower%20with%20glass%20door%2C%20double%20vanity%20with%20marble%20countertop%2C%20large%20mirror%2C%20elegant%20lighting%20fixtures%2C%20neutral%20tiles%2C%20fluffy%20towels%2C%20minimalist%20decor%2C%20spa-like%20atmosphere&width=600&height=400&seq=4&orientation=landscape",
+imageUrl: "https://github.com/kcajith/Simple-React-App-Graceful-homes/blob/main/graceful-homes/src/assets/Bathroom.jpg",
 },
 ];
 return (
