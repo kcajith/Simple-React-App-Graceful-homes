@@ -7,6 +7,9 @@ import livingRoomImage from './assets/Living.jpg';
 import bedRoomImage from './assets/Bedroom.jpg';
 import kitchenImage from './assets/Kitchen.jpg';
 import bathroomImage from './assets/Bathroom.jpg';
+import livingGallery1 from './assets/Living Gallery/WhatsApp Image 2025-06-28 at 12.14.46.jpeg';
+import livingGallery2 from './assets/Living Gallery/WhatsApp Image 2025-06-28 at 12.14.47.jpeg';
+import livingGallery3 from './assets/Living Gallery/WhatsApp Image 2025-06-28 at 12.14.48.jpeg';
 
 const App: React.FC = () => {
 const [showGallery, setShowGallery] = useState(false);
@@ -20,20 +23,27 @@ const rooms = [
 {
 title: "Living Room",
 imageUrl: livingRoomImage,
+galleryImages: [livingGallery1, livingGallery2, livingGallery3],
 },
 {
 title: "Bed Room",
 imageUrl: bedRoomImage,
+galleryImages: [],
 },
 {
 title: "Kitchen",
 imageUrl: kitchenImage,
+galleryImages: [],
 },
 {
 title: "Bathroom",
 imageUrl: bathroomImage,
+galleryImages: [],
 },
 ];
+
+const selectedRoomData = rooms.find(room => room.title === selectedRoom);
+
 return (
 <div className="min-h-screen bg-[#FAFAFA] font-sans">
 {/* Header with hero section */}
@@ -69,26 +79,28 @@ Our Design Categories
 <p className="text-center text-[#6A6A6A] max-w-2xl mx-auto mb-12">
 Explore our curated collection of interior designs for every room in your home. Each space is thoughtfully crafted to blend elegance with functionality.
 </p>
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-{rooms.map((room, index) => (
-<Card
-key={index}
-className="group relative h-96 overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer"
-onClick={() => handleRoomClick(room.title)}
->
-<div className="absolute inset-0 bg-black/30 z-10 transition-opacity duration-300 group-hover:bg-black/20"></div>
-<img
-src={room.imageUrl}
-alt={room.title}
-className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-/>
-<div className="absolute inset-0 flex items-center justify-center z-20">
-<h3 className="font-serif text-3xl text-white font-medium tracking-wide transition-all duration-300 group-hover:scale-110 group-hover:text-[#FAFAFA]">
-{room.title}
-</h3>
-</div>
-</Card>
-))}
+<div className="w-full flex justify-center">
+  <div className="grid grid-cols-2 gap-4">
+    {rooms.map((room, index) => (
+      <Card
+        key={index}
+        className="group relative w-[3in] h-[2in] overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer"
+        onClick={() => handleRoomClick(room.title)}
+      >
+        <img
+          src={room.imageUrl}
+          alt={room.title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-black/30 z-10 transition-opacity duration-300 group-hover:bg-black/20"></div>
+        <div className="absolute inset-0 flex items-center justify-center z-20">
+          <h3 className="font-serif text-lg text-white font-medium tracking-wide transition-all duration-300 group-hover:scale-110 group-hover:text-[#FAFAFA]">
+            {room.title}
+          </h3>
+        </div>
+      </Card>
+    ))}
+  </div>
 </div>
 </section>
 <section className="mb-16">
@@ -239,7 +251,20 @@ Creating beautiful, functional spaces that reflect your unique style and persona
 <DialogContent className="max-w-4xl">
 <div className="p-6">
 <h2 className="font-serif text-2xl text-[#4A4A4A] mb-6">{selectedRoom}</h2>
-<div className="grid grid-cols-1 gap-4">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[80vh] overflow-y-auto p-1">
+{selectedRoomData?.galleryImages && selectedRoomData.galleryImages.length > 0 ? (
+            selectedRoomData.galleryImages.map((image, index) => (
+<div key={index} className="relative aspect-video">
+<img
+                  src={image}
+                  alt={`${selectedRoom} gallery image ${index + 1}`}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+</div>
+            ))
+          ) : (
+<p>No gallery images available for this room.</p>
+          )}
 </div>
 </div>
 </DialogContent>
