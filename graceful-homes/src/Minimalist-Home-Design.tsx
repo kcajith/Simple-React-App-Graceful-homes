@@ -82,13 +82,13 @@ opacity: 0.9
 ></div>
 <div className="relative z-20 container mx-auto px-6 h-full flex flex-col pt-32">
 <div className="max-w-xl">
-<h1 className="font-serif text-5xl md:text-6xl font-bold text-[#4A4A4A] mb-4 animate-fade-in">
+<h1 className="font-serif text-6xl md:text-7xl font-extrabold text-[#C0A080] mb-6 text-center drop-shadow-lg tracking-wide animate-fade-in">
 Graceful Homes
 </h1>
-<p className="text-xl md:text-2xl text-[#4A4A4A] font-light mb-0 animate-fade-in-delay">
+<p className="text-xl md:text-2xl text-[#4A4A4A] font-light mb-0 animate-fade-in-delay text-center">
 Choose the best design for your home
 </p>
-<div className="bg-[#F0EBE5] rounded-lg p-10 md:p-16 mt-8 flex flex-col justify-center items-center" style={{marginTop: '1in', paddingTop: '1in', paddingBottom: '1in'}}>
+<div className="bg-[#F0EBE5] rounded-lg p-10 md:p-16 mt-8 flex flex-col justify-center items-center" style={{marginTop: '0.5in', paddingTop: '1in', paddingBottom: '1in'}}>
   <div className="max-w-3xl mx-auto text-center">
     <h2 className="font-serif text-3xl md:text-4xl text-[#4A4A4A] mb-6">
       Ready to Transform Your Space?
@@ -117,7 +117,7 @@ Choose the best design for your home
       Explore our curated collection of interior designs for every room in your home. Each space is thoughtfully crafted to blend elegance with functionality.
     </p>
     <ul className="text-left text-[#6A6A6A] max-w-2xl mx-auto mb-6 space-y-2 font-sans text-base font-normal">
-      <li><span className="font-bold">Living Room:</span> Our designs focus core elements of living room which includes Base and Wall units, Wall panels, Pooja unit and open shelves for balancing comfort with using elegant textures</li>
+      <li><span className="font-bold">Living Room:</span> Our designs focus on core elements of living room including Base and Wall units, Wall panels, Pooja unit, Open shelves for balancing comfort with using elegant textures</li>
       <li><span className="font-bold">Bedroom:</span> Our bedroom designs focus on soft lighting, functional storage and spacious efficient wardrobes.</li>
       <li><span className="font-bold">Kitchen:</span> Our kitchen designs comprises of straight, L-shaped, U-shaped modular kitchen, Parallel Gallery kitchen styles, Island and Peninsula styled modular kitchens.</li>
       <li><span className="font-bold">Bathroom:</span> Our bathroom designs focus on clean, calming and beautifully designed for higher durability.</li>
@@ -178,7 +178,7 @@ At Graceful Homes, we believe that your living space should be a reflection of y
 </ul>
 {/* Types of Machines used section */}
 <div className="mt-12">
-<h3 className="font-serif text-2xl md:text-3xl text-[#4A4A4A] mb-4">TYPES OF MACHINES USED</h3>
+<h2 className="font-serif text-3xl md:text-4xl text-[#4A4A4A] mb-4">Types of Machines Used</h2>
 <ul className="space-y-2">
 <li className="text-[#4A4A4A] font-bold tracking-wide">PRESSING MACHINE</li>
 <li className="text-[#4A4A4A] font-bold tracking-wide">PANEL SAW MACHINE</li>
@@ -190,62 +190,65 @@ At Graceful Homes, we believe that your living space should be a reflection of y
 <li className="text-[#4A4A4A] font-bold tracking-wide">SPIN ROUTER (GROVING)</li>
 </ul>
 </div>
+{/* Our Process section moved here */}
+<div className="mt-8">
+<h2 className="font-serif text-3xl md:text-4xl text-[#4A4A4A] mb-4">
+Our Process
+</h2>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+<div className="w-12 h-12 bg-[#C0A080]/10 rounded-full flex items-center justify-center mb-2">
+<i className="fas fa-pencil-ruler text-[#C0A080] text-xl"></i>
+</div>
+<h3 className="font-serif text-base text-[#4A4A4A] mb-1">Design Consultation</h3>
+<p className="text-[#6A6A6A] leading-none text-sm">
+We begin by understanding your vision and requirements through a focused consultation.
+</p>
+</div>
+<div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+<div className="w-12 h-12 bg-[#C0A080]/10 rounded-full flex items-center justify-center mb-2">
+<i className="fas fa-drafting-compass text-[#C0A080] text-xl"></i>
+</div>
+<h3 className="font-serif text-base text-[#4A4A4A] mb-1">Concept Development</h3>
+<p className="text-[#6A6A6A] leading-none text-sm">
+Our designers create concepts and mood boards tailored to your style and needs.
+</p>
+</div>
+<div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+<div className="w-12 h-12 bg-[#C0A080]/10 rounded-full flex items-center justify-center mb-2">
+<i className="fas fa-home text-[#C0A080] text-xl"></i>
+</div>
+<h3 className="font-serif text-base text-[#4A4A4A] mb-1">Implementation</h3>
+<p className="text-[#6A6A6A] leading-none text-sm">
+We manage sourcing and installation for a seamless transformation of your space.
+</p>
+</div>
+</div>
+</div>
 </div>
 <div className="w-full md:w-1/2 h-[400px] rounded-lg overflow-hidden">
 </div>
 </div>
 </section>
-<section className="mb-16">
-<h2 className="font-serif text-3xl md:text-4xl text-[#4A4A4A] text-center mb-12">
-Our Process
-</h2>
-<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-<div className="w-16 h-16 bg-[#C0A080]/10 rounded-full flex items-center justify-center mb-6">
-<i className="fas fa-pencil-ruler text-[#C0A080] text-2xl"></i>
-</div>
-<h3 className="font-serif text-xl text-[#4A4A4A] mb-4">Design Consultation</h3>
-<p className="text-[#6A6A6A]">
-We begin with understanding your vision, preferences, and requirements through an in-depth consultation with our design experts.
-</p>
-</div>
-<div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-<div className="w-16 h-16 bg-[#C0A080]/10 rounded-full flex items-center justify-center mb-6">
-<i className="fas fa-drafting-compass text-[#C0A080] text-2xl"></i>
-</div>
-<h3 className="font-serif text-xl text-[#4A4A4A] mb-4">Concept Development</h3>
-<p className="text-[#6A6A6A]">
-Our designers create detailed concepts and mood boards that align with your aesthetic preferences and functional needs.
-</p>
-</div>
-<div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-<div className="w-16 h-16 bg-[#C0A080]/10 rounded-full flex items-center justify-center mb-6">
-<i className="fas fa-home text-[#C0A080] text-2xl"></i>
-</div>
-<h3 className="font-serif text-xl text-[#4A4A4A] mb-4">Implementation</h3>
-<p className="text-[#6A6A6A]">
-We handle everything from sourcing materials to installation, ensuring a seamless transformation of your space into the home of your dreams.
-</p>
-</div>
-</div>
-</section>
 <section>
-<div className="bg-[#F0EBE5] rounded-lg p-10 md:p-16 flex flex-col justify-center items-center" style={{paddingTop: '1in', paddingBottom: '1in'}}>
-
-<div className="max-w-3xl mx-auto text-center">
-<h2 className="font-serif text-3xl md:text-4xl text-[#4A4A4A] mb-6">
-Ready to Transform Your Space?
-</h2>
-<p className="text-[#6A6A6A] mb-8">
-Schedule a consultation with our design experts and take the first step toward creating your dream home.
-</p>
-<a href="https://wa.me/919845526046" target="_blank" rel="noopener noreferrer">
-  <Button className="bg-[#C0A080] hover:bg-[#B09070] text-white px-6 py-5 text-base !rounded-button whitespace-nowrap cursor-pointer">
-    Click for Whatsapp Consultation
-  </Button>
-</a>
-</div>
-</div>
+  <div
+    className="bg-[#F0EBE5] rounded-lg p-10 md:p-16 flex flex-col justify-center items-center"
+    style={{ paddingTop: '1in', paddingBottom: '1in', marginTop: '-4in' }}
+  >
+    <div className="max-w-3xl mx-auto text-center">
+      <h2 className="font-serif text-3xl md:text-4xl text-[#4A4A4A] mb-6">
+        Ready to Transform Your Space?
+      </h2>
+      <p className="text-[#6A6A6A] mb-8">
+        Schedule a consultation with our design experts and take the first step toward creating your dream home.
+      </p>
+      <a href="https://wa.me/919845526046" target="_blank" rel="noopener noreferrer">
+        <Button className="bg-[#C0A080] hover:bg-[#B09070] text-white px-6 py-5 text-base !rounded-button whitespace-nowrap cursor-pointer">
+          Click for Whatsapp Consultation
+        </Button>
+      </a>
+    </div>
+  </div>
 </section>
 </main>
 <footer className="bg-[#4A4A4A] text-white py-12">
@@ -258,8 +261,8 @@ Creating beautiful, functional spaces that reflect your unique style and persona
 </p>
 </div>
 </div>
-<div className="pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
-<p>© 2025 Graceful Homes. All rights reserved.</p>
+<div className="pt-8 border-t border-gray-700 text-left text-gray-400 text-sm">
+  <p>© 2025 akcspace pvt ltd. All rights reserved.</p>
 </div>
 </div>
 </footer>
