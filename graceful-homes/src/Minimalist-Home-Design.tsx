@@ -10,6 +10,10 @@ import bathroomImage from './assets/Bathroom.jpg';
 import livingGallery1 from './assets/Living Gallery/WhatsApp Image 2025-06-28 at 12.14.46.jpeg';
 import livingGallery2 from './assets/Living Gallery/WhatsApp Image 2025-06-28 at 12.14.47.jpeg';
 import livingGallery3 from './assets/Living Gallery/WhatsApp Image 2025-06-28 at 12.14.48.jpeg';
+import living1Image from './assets/Living1.jpg';
+import living2Image from './assets/Living2.jpg';
+import kitchen1Image from './assets/Kitchen1.jpg';
+import kitchen2Image from './assets/Kitchen2.jpg';
 
 const App: React.FC = () => {
 const [showGallery, setShowGallery] = useState(false);
@@ -40,6 +44,26 @@ title: "Bathroom",
 imageUrl: bathroomImage,
 galleryImages: [],
 },
+{
+title: "Living 1",
+imageUrl: living1Image,
+galleryImages: [],
+},
+{
+title: "Living 2",
+imageUrl: living2Image,
+galleryImages: [],
+},
+{
+title: "Kitchen 1",
+imageUrl: kitchen1Image,
+galleryImages: [],
+},
+{
+title: "Kitchen 2",
+imageUrl: kitchen2Image,
+galleryImages: [],
+},
 ];
 
 const selectedRoomData = rooms.find(room => room.title === selectedRoom);
@@ -56,12 +80,12 @@ backgroundColor: `#F0EBE5`,
 opacity: 0.9
 }}
 ></div>
-<div className="relative z-20 container mx-auto px-6 h-full flex flex-col justify-center">
+<div className="relative z-20 container mx-auto px-6 h-full flex flex-col pt-32">
 <div className="max-w-xl">
 <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#4A4A4A] mb-4 animate-fade-in">
 Graceful Homes
 </h1>
-<p className="text-xl md:text-2xl text-[#4A4A4A] font-light mb-8 animate-fade-in-delay">
+<p className="text-xl md:text-2xl text-[#4A4A4A] font-light mb-0 animate-fade-in-delay">
 Choose the best design for your home
 </p>
 <Button className="bg-[#C0A080] hover:bg-[#B09070] text-white px-8 py-6 text-lg !rounded-button whitespace-nowrap cursor-pointer">
@@ -80,21 +104,23 @@ Our Design Categories
 Explore our curated collection of interior designs for every room in your home. Each space is thoughtfully crafted to blend elegance with functionality.
 </p>
 <div className="w-full flex justify-center">
-  <div className="grid grid-cols-2 gap-4">
+  <div className="grid grid-cols-2 gap-x-8 gap-y-4">
     {rooms.map((room, index) => (
       <Card
         key={index}
-        className="group relative w-[3in] h-[2in] overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer"
+        className="group relative w-[7in] h-[5in] overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer flex flex-col bg-white"
         onClick={() => handleRoomClick(room.title)}
       >
-        <img
-          src={room.imageUrl}
-          alt={room.title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-black/30 z-10 transition-opacity duration-300 group-hover:bg-black/20"></div>
-        <div className="absolute inset-0 flex items-center justify-center z-20">
-          <h3 className="font-serif text-lg text-white font-medium tracking-wide transition-all duration-300 group-hover:scale-110 group-hover:text-[#FAFAFA]">
+        <div className="relative" style={{height: '80%'}}>
+          <img
+            src={room.imageUrl}
+            alt={room.title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            style={{ display: 'block', height: '100%' }}
+          />
+        </div>
+        <div className="text-center bg-white flex items-center justify-center py-2">
+          <h3 className="font-serif text-lg text-black font-medium tracking-wide">
             {room.title}
           </h3>
         </div>
