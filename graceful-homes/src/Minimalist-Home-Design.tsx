@@ -190,62 +190,65 @@ At Graceful Homes, we believe that your living space should be a reflection of y
 <li className="text-[#4A4A4A] font-bold tracking-wide">SPIN ROUTER (GROVING)</li>
 </ul>
 </div>
+{/* Our Process section moved here */}
+<div className="mt-8">
+<h2 className="font-serif text-3xl md:text-4xl text-[#4A4A4A] mb-4">
+Our Process
+</h2>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+<div className="w-12 h-12 bg-[#C0A080]/10 rounded-full flex items-center justify-center mb-2">
+<i className="fas fa-pencil-ruler text-[#C0A080] text-xl"></i>
+</div>
+<h3 className="font-serif text-base text-[#4A4A4A] mb-1">Design Consultation</h3>
+<p className="text-[#6A6A6A] leading-tight text-sm">
+We begin by understanding your vision and requirements through a focused consultation.
+</p>
+</div>
+<div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+<div className="w-12 h-12 bg-[#C0A080]/10 rounded-full flex items-center justify-center mb-2">
+<i className="fas fa-drafting-compass text-[#C0A080] text-xl"></i>
+</div>
+<h3 className="font-serif text-base text-[#4A4A4A] mb-1">Concept Development</h3>
+<p className="text-[#6A6A6A] leading-tight text-sm">
+Our designers create concepts and mood boards tailored to your style and needs.
+</p>
+</div>
+<div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+<div className="w-12 h-12 bg-[#C0A080]/10 rounded-full flex items-center justify-center mb-2">
+<i className="fas fa-home text-[#C0A080] text-xl"></i>
+</div>
+<h3 className="font-serif text-base text-[#4A4A4A] mb-1">Implementation</h3>
+<p className="text-[#6A6A6A] leading-tight text-sm">
+We manage sourcing and installation for a seamless transformation of your space.
+</p>
+</div>
+</div>
+</div>
 </div>
 <div className="w-full md:w-1/2 h-[400px] rounded-lg overflow-hidden">
 </div>
 </div>
 </section>
-<section className="mb-16">
-<h2 className="font-serif text-3xl md:text-4xl text-[#4A4A4A] text-center mb-12">
-Our Process
-</h2>
-<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-<div className="w-16 h-16 bg-[#C0A080]/10 rounded-full flex items-center justify-center mb-6">
-<i className="fas fa-pencil-ruler text-[#C0A080] text-2xl"></i>
-</div>
-<h3 className="font-serif text-xl text-[#4A4A4A] mb-4">Design Consultation</h3>
-<p className="text-[#6A6A6A]">
-We begin with understanding your vision, preferences, and requirements through an in-depth consultation with our design experts.
-</p>
-</div>
-<div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-<div className="w-16 h-16 bg-[#C0A080]/10 rounded-full flex items-center justify-center mb-6">
-<i className="fas fa-drafting-compass text-[#C0A080] text-2xl"></i>
-</div>
-<h3 className="font-serif text-xl text-[#4A4A4A] mb-4">Concept Development</h3>
-<p className="text-[#6A6A6A]">
-Our designers create detailed concepts and mood boards that align with your aesthetic preferences and functional needs.
-</p>
-</div>
-<div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-<div className="w-16 h-16 bg-[#C0A080]/10 rounded-full flex items-center justify-center mb-6">
-<i className="fas fa-home text-[#C0A080] text-2xl"></i>
-</div>
-<h3 className="font-serif text-xl text-[#4A4A4A] mb-4">Implementation</h3>
-<p className="text-[#6A6A6A]">
-We handle everything from sourcing materials to installation, ensuring a seamless transformation of your space into the home of your dreams.
-</p>
-</div>
-</div>
-</section>
 <section>
-<div className="bg-[#F0EBE5] rounded-lg p-10 md:p-16 flex flex-col justify-center items-center" style={{paddingTop: '1in', paddingBottom: '1in'}}>
-
-<div className="max-w-3xl mx-auto text-center">
-<h2 className="font-serif text-3xl md:text-4xl text-[#4A4A4A] mb-6">
-Ready to Transform Your Space?
-</h2>
-<p className="text-[#6A6A6A] mb-8">
-Schedule a consultation with our design experts and take the first step toward creating your dream home.
-</p>
-<a href="https://wa.me/919845526046" target="_blank" rel="noopener noreferrer">
-  <Button className="bg-[#C0A080] hover:bg-[#B09070] text-white px-6 py-5 text-base !rounded-button whitespace-nowrap cursor-pointer">
-    Click for Whatsapp Consultation
-  </Button>
-</a>
-</div>
-</div>
+  <div
+    className="bg-[#F0EBE5] rounded-lg p-10 md:p-16 flex flex-col justify-center items-center"
+    style={{ paddingTop: '1in', paddingBottom: '1in', marginTop: '-4in' }}
+  >
+    <div className="max-w-3xl mx-auto text-center">
+      <h2 className="font-serif text-3xl md:text-4xl text-[#4A4A4A] mb-6">
+        Ready to Transform Your Space?
+      </h2>
+      <p className="text-[#6A6A6A] mb-8">
+        Schedule a consultation with our design experts and take the first step toward creating your dream home.
+      </p>
+      <a href="https://wa.me/919845526046" target="_blank" rel="noopener noreferrer">
+        <Button className="bg-[#C0A080] hover:bg-[#B09070] text-white px-6 py-5 text-base !rounded-button whitespace-nowrap cursor-pointer">
+          Click for Whatsapp Consultation
+        </Button>
+      </a>
+    </div>
+  </div>
 </section>
 </main>
 <footer className="bg-[#4A4A4A] text-white py-12">
