@@ -88,7 +88,7 @@ Graceful Homes
 <p className="text-xl md:text-2xl text-[#4A4A4A] font-light mb-0 animate-fade-in-delay">
 Choose the best design for your home
 </p>
-<div className="bg-[#F0EBE5] rounded-lg p-10 md:p-16 mt-8 flex flex-col justify-center items-center" style={{paddingTop: '1in', paddingBottom: '1in'}}>
+<div className="bg-[#F0EBE5] rounded-lg p-10 md:p-16 mt-8 flex flex-col justify-center items-center" style={{marginTop: '1in', paddingTop: '1in', paddingBottom: '1in'}}>
   <div className="max-w-3xl mx-auto text-center">
     <h2 className="font-serif text-3xl md:text-4xl text-[#4A4A4A] mb-6">
       Ready to Transform Your Space?
@@ -109,43 +109,45 @@ Choose the best design for your home
 {/* Main content */}
 <main className="container mx-auto px-6 py-16">
 <section className="mb-16">
-<h2 className="font-serif text-3xl md:text-4xl text-[#4A4A4A] text-center mb-4">
-Our Design Categories
-</h2>
-<p className="text-left text-[#6A6A6A] max-w-2xl mx-auto mb-12">
-Explore our curated collection of interior designs for every room in your home. Each space is thoughtfully crafted to blend elegance with functionality.
-</p>
-<ul className="text-left text-[#6A6A6A] max-w-2xl mx-auto mb-12 space-y-2 font-sans text-base font-normal">
-  <li><span className="font-bold">Living Room:</span> Our designs focus core elements of living room which includes Base and Wall units, Wall panels, Pooja unit and open shelves for balancing comfort with using elegant textures</li>
-  <li><span className="font-bold">Bedroom:</span> Our bedroom designs focus on soft lighting, functional storage and spacious efficient wardrobes.</li>
-  <li><span className="font-bold">Kitchen:</span> Our kitchen designs comprises of straight, L-shaped, U-shaped modular kitchen, Parallel Gallery kitchen styles, Island and Peninsula styled modular kitchens.</li>
-  <li><span className="font-bold">Bathroom:</span> Our bathroom designs focus on clean, calming and beautifully designed for higher durability.</li>
-</ul>
-<div className="w-full flex justify-center">
-  <div className="grid grid-cols-2 gap-x-12 gap-y-4">
-    {rooms.map((room, index) => (
-      <Card
-        key={index}
-        className="group relative w-[7in] h-[5in] overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer flex flex-col bg-white"
-        onClick={() => handleRoomClick(room.title)}
-      >
-        <div className="relative" style={{height: '80%'}}>
-          <img
-            src={room.imageUrl}
-            alt={room.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            style={{ display: 'block', height: '100%' }}
-          />
-        </div>
-        <div className="text-center bg-white flex items-center justify-center py-2">
-          <h3 className="font-serif text-lg text-black font-medium tracking-wide">
-            {room.title}
-          </h3>
-        </div>
-      </Card>
-    ))}
+  <div className="flex flex-col items-center justify-center mb-8">
+    <h2 className="font-serif text-3xl md:text-4xl text-[#4A4A4A] mb-2 text-center">
+      Our Design Categories
+    </h2>
+    <p className="text-left text-[#6A6A6A] max-w-2xl mx-auto mt-2 mb-6">
+      Explore our curated collection of interior designs for every room in your home. Each space is thoughtfully crafted to blend elegance with functionality.
+    </p>
+    <ul className="text-left text-[#6A6A6A] max-w-2xl mx-auto mb-6 space-y-2 font-sans text-base font-normal">
+      <li><span className="font-bold">Living Room:</span> Our designs focus core elements of living room which includes Base and Wall units, Wall panels, Pooja unit and open shelves for balancing comfort with using elegant textures</li>
+      <li><span className="font-bold">Bedroom:</span> Our bedroom designs focus on soft lighting, functional storage and spacious efficient wardrobes.</li>
+      <li><span className="font-bold">Kitchen:</span> Our kitchen designs comprises of straight, L-shaped, U-shaped modular kitchen, Parallel Gallery kitchen styles, Island and Peninsula styled modular kitchens.</li>
+      <li><span className="font-bold">Bathroom:</span> Our bathroom designs focus on clean, calming and beautifully designed for higher durability.</li>
+    </ul>
   </div>
-</div>
+  <div className="w-full flex justify-center">
+    <div className="grid grid-cols-2 gap-x-12 gap-y-4">
+      {rooms.map((room, index) => (
+        <Card
+          key={index}
+          className="group relative w-[7in] h-[5in] overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer flex flex-col bg-white"
+          onClick={() => handleRoomClick(room.title)}
+        >
+          <div className="relative" style={{height: '80%'}}>
+            <img
+              src={room.imageUrl}
+              alt={room.title}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              style={{ display: 'block', height: '100%' }}
+            />
+          </div>
+          <div className="text-center bg-white flex items-center justify-center py-2">
+            <h3 className="font-serif text-lg text-black font-medium tracking-wide">
+              {room.title}
+            </h3>
+          </div>
+        </Card>
+      ))}
+    </div>
+  </div>
 </section>
 <section className="mb-16">
 <div className="flex flex-col md:flex-row items-center gap-12">
