@@ -88,9 +88,21 @@ Graceful Homes
 <p className="text-xl md:text-2xl text-[#4A4A4A] font-light mb-0 animate-fade-in-delay">
 Choose the best design for your home
 </p>
-<Button className="bg-[#C0A080] hover:bg-[#B09070] text-white px-8 py-6 text-lg !rounded-button whitespace-nowrap cursor-pointer">
-Explore Designs
-</Button>
+<div className="bg-[#F0EBE5] rounded-lg p-10 md:p-16 mt-8 flex flex-col justify-center items-center" style={{paddingTop: '1in', paddingBottom: '1in'}}>
+  <div className="max-w-3xl mx-auto text-center">
+    <h2 className="font-serif text-3xl md:text-4xl text-[#4A4A4A] mb-6">
+      Ready to Transform Your Space?
+    </h2>
+    <p className="text-[#6A6A6A] mb-8">
+      Schedule a consultation with our design experts and take the first step toward creating your dream home.
+    </p>
+    <a href="https://wa.me/919845526046" target="_blank" rel="noopener noreferrer">
+      <Button className="bg-[#C0A080] hover:bg-[#B09070] text-white px-6 py-5 text-base !rounded-button whitespace-nowrap cursor-pointer">
+        Click for Whatsapp Consultation
+      </Button>
+    </a>
+  </div>
+</div>
 </div>
 </div>
 </header>
@@ -156,9 +168,20 @@ At Graceful Homes, we believe that your living space should be a reflection of y
 <span className="text-[#6A6A6A]">Timely project completion and installation</span>
 </li>
 </ul>
-<Button className="bg-[#C0A080] hover:bg-[#B09070] text-white px-6 py-2 !rounded-button whitespace-nowrap cursor-pointer">
-Learn More
-</Button>
+{/* Types of Machines used section */}
+<div className="mt-12">
+<h3 className="font-serif text-2xl md:text-3xl text-[#4A4A4A] mb-4">TYPES OF MACHINES USED</h3>
+<ul className="space-y-2">
+<li className="text-[#4A4A4A] font-bold tracking-wide">PRESSING MACHINE</li>
+<li className="text-[#4A4A4A] font-bold tracking-wide">PANEL SAW MACHINE</li>
+<li className="text-[#4A4A4A] font-bold tracking-wide">BEAM SAW MACHINE</li>
+<li className="text-[#4A4A4A] font-bold tracking-wide">EDGE BANDING MACHINE</li>
+<li className="text-[#4A4A4A] font-bold tracking-wide">CNC ROUTER MACHINE (DRILLING)</li>
+<li className="text-[#4A4A4A] font-bold tracking-wide">MULTI-BORING MACHINE (MANUAL DRILLING)</li>
+<li className="text-[#4A4A4A] font-bold tracking-wide">DOUBLE HEAD DRILLING MACHINE</li>
+<li className="text-[#4A4A4A] font-bold tracking-wide">SPIN ROUTER (GROVING)</li>
+</ul>
+</div>
 </div>
 <div className="w-full md:w-1/2 h-[400px] rounded-lg overflow-hidden">
 </div>
@@ -199,7 +222,8 @@ We handle everything from sourcing materials to installation, ensuring a seamles
 </div>
 </section>
 <section>
-<div className="bg-[#F0EBE5] rounded-lg p-10 md:p-16">
+<div className="bg-[#F0EBE5] rounded-lg p-10 md:p-16 flex flex-col justify-center items-center" style={{paddingTop: '1in', paddingBottom: '1in'}}>
+
 <div className="max-w-3xl mx-auto text-center">
 <h2 className="font-serif text-3xl md:text-4xl text-[#4A4A4A] mb-6">
 Ready to Transform Your Space?
@@ -207,9 +231,11 @@ Ready to Transform Your Space?
 <p className="text-[#6A6A6A] mb-8">
 Schedule a consultation with our design experts and take the first step toward creating your dream home.
 </p>
-<Button className="bg-[#C0A080] hover:bg-[#B09070] text-white px-8 py-6 text-lg !rounded-button whitespace-nowrap cursor-pointer">
-Book a Consultation
-</Button>
+<a href="https://wa.me/919845526046" target="_blank" rel="noopener noreferrer">
+  <Button className="bg-[#C0A080] hover:bg-[#B09070] text-white px-6 py-5 text-base !rounded-button whitespace-nowrap cursor-pointer">
+    Click for Whatsapp Consultation
+  </Button>
+</a>
 </div>
 </div>
 </section>
@@ -222,49 +248,6 @@ Book a Consultation
 <p className="text-gray-300 text-sm">
 Creating beautiful, functional spaces that reflect your unique style and personality.
 </p>
-</div>
-<div>
-<h4 className="font-medium mb-4">Quick Links</h4>
-<ul className="space-y-2">
-<li><a href="#" className="text-gray-300 hover:text-white transition-colors cursor-pointer">About Us</a></li>
-<li><a href="#" className="text-gray-300 hover:text-white transition-colors cursor-pointer">Services</a></li>
-<li><a href="#" className="text-gray-300 hover:text-white transition-colors cursor-pointer">Portfolio</a></li>
-<li><a href="#" className="text-gray-300 hover:text-white transition-colors cursor-pointer">Testimonials</a></li>
-</ul>
-</div>
-<div>
-<h4 className="font-medium mb-4">Contact</h4>
-<ul className="space-y-2 text-gray-300">
-<li className="flex items-start">
-<i className="fas fa-map-marker-alt mt-1 mr-3"></i>
-<span>123 Design Street, Creative City</span>
-</li>
-<li className="flex items-start">
-<i className="fas fa-phone mt-1 mr-3"></i>
-<span>+1 (555) 123-4567</span>
-</li>
-<li className="flex items-start">
-<i className="fas fa-envelope mt-1 mr-3"></i>
-<span>info@gracefulhomes.com</span>
-</li>
-</ul>
-</div>
-<div>
-<h4 className="font-medium mb-4">Follow Us</h4>
-<div className="flex space-x-4">
-<a href="#" className="w-10 h-10 rounded-full bg-[#C0A080] flex items-center justify-center hover:bg-[#B09070] transition-colors cursor-pointer">
-<i className="fab fa-instagram"></i>
-</a>
-<a href="#" className="w-10 h-10 rounded-full bg-[#C0A080] flex items-center justify-center hover:bg-[#B09070] transition-colors cursor-pointer">
-<i className="fab fa-pinterest"></i>
-</a>
-<a href="#" className="w-10 h-10 rounded-full bg-[#C0A080] flex items-center justify-center hover:bg-[#B09070] transition-colors cursor-pointer">
-<i className="fab fa-facebook-f"></i>
-</a>
-<a href="#" className="w-10 h-10 rounded-full bg-[#C0A080] flex items-center justify-center hover:bg-[#B09070] transition-colors cursor-pointer">
-<i className="fab fa-houzz"></i>
-</a>
-</div>
 </div>
 </div>
 <div className="pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
