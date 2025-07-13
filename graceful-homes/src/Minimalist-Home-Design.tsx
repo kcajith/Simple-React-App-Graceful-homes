@@ -3,17 +3,17 @@ import React, { useState } from 'react';
 import { Button } from "../../components/ui/button";
 import { Card } from "../../components/ui/card";
 import { Dialog, DialogContent } from "../../components/ui/dialog";
-import livingRoomImage from './assets/Living.jpg';
-import bedRoomImage from './assets/Bedroom.jpg';
-import kitchenImage from './assets/Kitchen.jpg';
-import bathroomImage from './assets/Bathroom.jpg';
+import livingRoomImage from './assets/Living-1.jpg';
+import bedRoomImage from './assets/Bedroom-1.jpg';
+import kitchenImage from './assets/Kitchen-1.jpg';
+import bathroomImage from './assets/Bathroom-1.jpg';
 import livingGallery1 from './assets/Living Gallery/WhatsApp Image 2025-06-28 at 12.14.46.jpeg';
 import livingGallery2 from './assets/Living Gallery/WhatsApp Image 2025-06-28 at 12.14.47.jpeg';
 import livingGallery3 from './assets/Living Gallery/WhatsApp Image 2025-06-28 at 12.14.48.jpeg';
-import living1Image from './assets/Living1.jpg';
-import living2Image from './assets/Living2.jpg';
-import kitchen1Image from './assets/Kitchen1.jpg';
-import kitchen2Image from './assets/Kitchen2.jpg';
+import living1Image from './assets/Living-2.jpg';
+import living2Image from './assets/Living-3.jpg';
+import kitchen1Image from './assets/Kitchen-2.jpg';
+import kitchen2Image from './assets/Kitchen-3.jpg';
 
 const App: React.FC = () => {
 const [showGallery, setShowGallery] = useState(false);
@@ -104,7 +104,7 @@ Our Design Categories
 Explore our curated collection of interior designs for every room in your home. Each space is thoughtfully crafted to blend elegance with functionality.
 </p>
 <div className="w-full flex justify-center">
-  <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+  <div className="grid grid-cols-2 gap-x-12 gap-y-4">
     {rooms.map((room, index) => (
       <Card
         key={index}
