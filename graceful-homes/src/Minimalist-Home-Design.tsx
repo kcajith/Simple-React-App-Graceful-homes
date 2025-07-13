@@ -3,6 +3,18 @@ import React, { useState } from 'react';
 import { Button } from "../../components/ui/button";
 import { Card } from "../../components/ui/card";
 import { Dialog, DialogContent } from "../../components/ui/dialog";
+import livingRoomImage from './assets/Living.jpg';
+import bedRoomImage from './assets/Bedroom.jpg';
+import kitchenImage from './assets/Kitchen.jpg';
+import bathroomImage from './assets/Bathroom.jpg';
+import livingGallery1 from './assets/Living Gallery/WhatsApp Image 2025-06-28 at 12.14.46.jpeg';
+import livingGallery2 from './assets/Living Gallery/WhatsApp Image 2025-06-28 at 12.14.47.jpeg';
+import livingGallery3 from './assets/Living Gallery/WhatsApp Image 2025-06-28 at 12.14.48.jpeg';
+import living1Image from './assets/Living1.jpg';
+import living2Image from './assets/Living2.jpg';
+import kitchen1Image from './assets/Kitchen1.jpg';
+import kitchen2Image from './assets/Kitchen2.jpg';
+
 const App: React.FC = () => {
 const [showGallery, setShowGallery] = useState(false);
 const [selectedRoom, setSelectedRoom] = useState<string | null>(null);
@@ -14,21 +26,48 @@ setShowGallery(true);
 const rooms = [
 {
 title: "Living Room",
-imageUrl: "https://readdy.ai/api/search-image?query=elegant%20modern%20living%20room%20with%20minimalist%20furniture%2C%20soft%20natural%20lighting%2C%20neutral%20color%20palette%2C%20large%20windows%2C%20wooden%20accents%2C%20plush%20sofa%2C%20decorative%20pillows%2C%20coffee%20table%20with%20design%20books%2C%20indoor%20plants%2C%20high-end%20interior%20design&width=600&height=400&seq=1&orientation=landscape",
+imageUrl: livingRoomImage,
+galleryImages: [livingGallery1, livingGallery2, livingGallery3],
 },
 {
 title: "Bed Room",
-imageUrl: "https://readdy.ai/api/search-image?query=luxurious%20bedroom%20with%20king-size%20bed%2C%20premium%20bedding%2C%20soft%20neutral%20colors%2C%20bedside%20tables%20with%20elegant%20lamps%2C%20large%20windows%20with%20sheer%20curtains%2C%20plush%20carpet%2C%20minimalist%20decor%2C%20morning%20light%20streaming%20in%2C%20peaceful%20atmosphere&width=600&height=400&seq=2&orientation=landscape",
+imageUrl: bedRoomImage,
+galleryImages: [],
 },
 {
 title: "Kitchen",
-imageUrl: "https://readdy.ai/api/search-image?query=modern%20kitchen%20with%20marble%20countertops%2C%20high-end%20appliances%2C%20wooden%20cabinets%2C%20island%20with%20bar%20stools%2C%20pendant%20lighting%2C%20open%20shelving%20with%20minimalist%20dishware%2C%20indoor%20herbs%2C%20natural%20light%2C%20clean%20lines%2C%20sophisticated%20design&width=600&height=400&seq=3&orientation=landscape",
+imageUrl: kitchenImage,
+galleryImages: [],
 },
 {
 title: "Bathroom",
-imageUrl: "https://readdy.ai/api/search-image?query=luxury%20bathroom%20with%20freestanding%20bathtub%2C%20walk-in%20shower%20with%20glass%20door%2C%20double%20vanity%20with%20marble%20countertop%2C%20large%20mirror%2C%20elegant%20lighting%20fixtures%2C%20neutral%20tiles%2C%20fluffy%20towels%2C%20minimalist%20decor%2C%20spa-like%20atmosphere&width=600&height=400&seq=4&orientation=landscape",
+imageUrl: bathroomImage,
+galleryImages: [],
+},
+{
+title: "Living 1",
+imageUrl: living1Image,
+galleryImages: [],
+},
+{
+title: "Living 2",
+imageUrl: living2Image,
+galleryImages: [],
+},
+{
+title: "Kitchen 1",
+imageUrl: kitchen1Image,
+galleryImages: [],
+},
+{
+title: "Kitchen 2",
+imageUrl: kitchen2Image,
+galleryImages: [],
 },
 ];
+
+const selectedRoomData = rooms.find(room => room.title === selectedRoom);
+
 return (
 <div className="min-h-screen bg-[#FAFAFA] font-sans">
 {/* Header with hero section */}
@@ -37,16 +76,16 @@ return (
 <div
 className="absolute inset-0 bg-cover bg-center"
 style={{
-backgroundImage: `url(https://readdy.ai/api/search-image?query=luxurious%20home%20interior%20with%20open%20concept%20design%2C%20large%20windows%20with%20natural%20light%2C%20elegant%20furniture%2C%20neutral%20color%20palette%2C%20wooden%20floors%2C%20high%20ceilings%2C%20indoor%20plants%2C%20architectural%20details%2C%20sophisticated%20and%20calm%20atmosphere&width=1440&height=600&seq=5&orientation=landscape)`,
+backgroundColor: `#F0EBE5`,
 opacity: 0.9
 }}
 ></div>
-<div className="relative z-20 container mx-auto px-6 h-full flex flex-col justify-center">
+<div className="relative z-20 container mx-auto px-6 h-full flex flex-col pt-32">
 <div className="max-w-xl">
 <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#4A4A4A] mb-4 animate-fade-in">
 Graceful Homes
 </h1>
-<p className="text-xl md:text-2xl text-[#4A4A4A] font-light mb-8 animate-fade-in-delay">
+<p className="text-xl md:text-2xl text-[#4A4A4A] font-light mb-0 animate-fade-in-delay">
 Choose the best design for your home
 </p>
 <Button className="bg-[#C0A080] hover:bg-[#B09070] text-white px-8 py-6 text-lg !rounded-button whitespace-nowrap cursor-pointer">
@@ -64,25 +103,30 @@ Our Design Categories
 <p className="text-center text-[#6A6A6A] max-w-2xl mx-auto mb-12">
 Explore our curated collection of interior designs for every room in your home. Each space is thoughtfully crafted to blend elegance with functionality.
 </p>
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-{rooms.map((room, index) => (
-<Card
-key={index}
-className="group relative h-96 overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer"
-onClick={() => handleRoomClick(room.title)}
->
-<div className="absolute inset-0 bg-black/30 z-10 transition-opacity duration-300 group-hover:bg-black/20"></div>
-<div
-className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-style={{ backgroundImage: `url(${room.imageUrl})` }}
-></div>
-<div className="absolute inset-0 flex items-center justify-center z-20">
-<h3 className="font-serif text-3xl text-white font-medium tracking-wide transition-all duration-300 group-hover:scale-110 group-hover:text-[#FAFAFA]">
-{room.title}
-</h3>
-</div>
-</Card>
-))}
+<div className="w-full flex justify-center">
+  <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+    {rooms.map((room, index) => (
+      <Card
+        key={index}
+        className="group relative w-[7in] h-[5in] overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer flex flex-col bg-white"
+        onClick={() => handleRoomClick(room.title)}
+      >
+        <div className="relative" style={{height: '80%'}}>
+          <img
+            src={room.imageUrl}
+            alt={room.title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            style={{ display: 'block', height: '100%' }}
+          />
+        </div>
+        <div className="text-center bg-white flex items-center justify-center py-2">
+          <h3 className="font-serif text-lg text-black font-medium tracking-wide">
+            {room.title}
+          </h3>
+        </div>
+      </Card>
+    ))}
+  </div>
 </div>
 </section>
 <section className="mb-16">
@@ -117,11 +161,6 @@ Learn More
 </Button>
 </div>
 <div className="w-full md:w-1/2 h-[400px] rounded-lg overflow-hidden">
-<img
-src="https://readdy.ai/api/search-image?query=interior%20designer%20working%20with%20client%2C%20discussing%20home%20design%20plans%2C%20fabric%20swatches%20and%20color%20palettes%20on%20table%2C%20elegant%20office%20setting%2C%20professional%20atmosphere%2C%20natural%20lighting%2C%20modern%20interior%20design%20studio&width=600&height=400&seq=6&orientation=landscape"
-alt="Interior designer consultation"
-className="w-full h-full object-cover object-top"
-/>
 </div>
 </div>
 </section>
@@ -238,32 +277,20 @@ Creating beautiful, functional spaces that reflect your unique style and persona
 <DialogContent className="max-w-4xl">
 <div className="p-6">
 <h2 className="font-serif text-2xl text-[#4A4A4A] mb-6">{selectedRoom}</h2>
-<div className="grid grid-cols-1 gap-4">
-{selectedRoom === "Living Room" && (
-<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-<div className="relative aspect-video md:col-span-2">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[80vh] overflow-y-auto p-1">
+{selectedRoomData?.galleryImages && selectedRoomData.galleryImages.length > 0 ? (
+            selectedRoomData.galleryImages.map((image, index) => (
+<div key={index} className="relative aspect-video">
 <img
-src="https://static.readdy.ai/image/66a4088866625659f5b4911b13b334ec/55d671b829047a2dc5136940b9237d82.jfif"
-alt="Living Room Design"
-className="w-full h-full object-cover rounded-lg"
-/>
+                  src={image}
+                  alt={`${selectedRoom} gallery image ${index + 1}`}
+                  className="w-full h-full object-cover rounded-lg"
+                />
 </div>
-<div className="relative aspect-video">
-<img
-src="https://static.readdy.ai/image/66a4088866625659f5b4911b13b334ec/5f292856518b5bb3615b3ec1318ef81f.jfif"
-alt="Living Room Design"
-className="w-full h-full object-cover rounded-lg"
-/>
-</div>
-<div className="relative aspect-video">
-<img
-src="https://static.readdy.ai/image/66a4088866625659f5b4911b13b334ec/9e99d5ab02bb578bde53605b07dbc1f0.jfif"
-alt="Living Room Design"
-className="w-full h-full object-cover rounded-lg"
-/>
-</div>
-</div>
-)}
+            ))
+          ) : (
+<p>No gallery images available for this room.</p>
+          )}
 </div>
 </div>
 </DialogContent>
