@@ -112,9 +112,15 @@ Choose the best design for your home
 <h2 className="font-serif text-3xl md:text-4xl text-[#4A4A4A] text-center mb-4">
 Our Design Categories
 </h2>
-<p className="text-center text-[#6A6A6A] max-w-2xl mx-auto mb-12">
+<p className="text-left text-[#6A6A6A] max-w-2xl mx-auto mb-12">
 Explore our curated collection of interior designs for every room in your home. Each space is thoughtfully crafted to blend elegance with functionality.
 </p>
+<ul className="text-left text-[#6A6A6A] max-w-2xl mx-auto mb-12 space-y-2 font-sans text-base font-normal">
+  <li><span className="font-bold">Living Room:</span> Our designs focus core elements of living room which includes Base and Wall units, Wall panels, Pooja unit and open shelves for balancing comfort with using elegant textures</li>
+  <li><span className="font-bold">Bedroom:</span> Our bedroom designs focus on soft lighting, functional storage and spacious efficient wardrobes.</li>
+  <li><span className="font-bold">Kitchen:</span> Our kitchen designs comprises of straight, L-shaped, U-shaped modular kitchen, Parallel Gallery kitchen styles, Island and Peninsula styled modular kitchens.</li>
+  <li><span className="font-bold">Bathroom:</span> Our bathroom designs focus on clean, calming and beautifully designed for higher durability.</li>
+</ul>
 <div className="w-full flex justify-center">
   <div className="grid grid-cols-2 gap-x-12 gap-y-4">
     {rooms.map((room, index) => (
