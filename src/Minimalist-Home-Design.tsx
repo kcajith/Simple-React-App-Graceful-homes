@@ -100,6 +100,18 @@ Choose the best design for your home
       <Button className="bg-[#C0A080] hover:bg-[#B09070] text-white px-6 py-5 text-base !rounded-button whitespace-nowrap cursor-pointer">
         Click for Whatsapp Consultation
       </Button>
+   <p className="text-[#6A6A6A] mb-8">
+        <span className="font-bold">Address:</span> <span className="font-bold">RAJESH GOWDA</span>, New survey no.217/3, Situated at Bidarahalli village, Bidarahalli Hobli Bangalore East Taluk 560049
+        <br />
+        <a
+          href="https://maps.app.goo.gl/ruYpqSCvDgFuC5QP8"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: 'black', textDecoration: 'underline' }}
+        >
+          Google Map Link
+        </a>
+      </p>
     </a>
   </div>
 </div>
@@ -241,7 +253,7 @@ We manage sourcing and installation for a seamless transformation of your space.
           Click for Whatsapp Consultation
          </Button>
       <p className="text-[#6A6A6A] mb-8">
-        <span className="font-bold">Address:</span> <span className="font-bold">Rajesh</span>, New survey no.217/3, Situated at Bidarahalli village, Bidarahalli Hobli Bangalore East Taluk 560049
+        <span className="font-bold">Address:</span> <span className="font-bold">RAJESH GOWDA</span>, New survey no.217/3, Situated at Bidarahalli village, Bidarahalli Hobli Bangalore East Taluk 560049
         <br />
         <a
           href="https://maps.app.goo.gl/ruYpqSCvDgFuC5QP8"
