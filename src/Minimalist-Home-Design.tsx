@@ -1,8 +1,8 @@
 // The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
 import React, { useState } from 'react';
-import { Button } from "../../components/ui/button";
-import { Card } from "../../components/ui/card";
-import { Dialog, DialogContent } from "../../components/ui/dialog";
+import { Button } from "../components/ui/button";
+import { Card } from "../components/ui/card";
+import { Dialog, DialogContent } from "../components/ui/dialog";
 import livingRoomImage from './assets/Living-1.jpg';
 import bedRoomImage from './assets/Bedroom-1.jpg';
 import kitchenImage from './assets/Kitchen-1.jpg';
