@@ -39,11 +39,11 @@ title: "Kitchen",
 imageUrl: kitchenImage,
 galleryImages: [],
 },
-{
+/*{
 title: "Bathroom",
 imageUrl: bathroomImage,
 galleryImages: [],
-},
+},*/
 {
 title: "Living 1",
 imageUrl: living1Image,
@@ -59,11 +59,11 @@ title: "Kitchen 1",
 imageUrl: kitchen1Image,
 galleryImages: [],
 },
-{
+/*{
 title: "Kitchen 2",
 imageUrl: kitchen2Image,
 galleryImages: [],
-},
+},*/
 ];
 
 const selectedRoomData = rooms.find(room => room.title === selectedRoom);
@@ -96,7 +96,7 @@ Choose the best design for your home
     <p className="text-[#6A6A6A] mb-8">
       Schedule a consultation with our design experts and take the first step toward creating your dream home.
     </p>
-    <a href="https://wa.me/919845526046" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/916364470031" target="_blank" rel="noopener noreferrer">
       <Button className="bg-[#C0A080] hover:bg-[#B09070] text-white px-6 py-5 text-base !rounded-button whitespace-nowrap cursor-pointer">
         Click for Whatsapp Consultation
       </Button>
@@ -128,21 +128,15 @@ Choose the best design for your home
       {rooms.map((room, index) => (
         <Card
           key={index}
-          className="group relative w-[7in] h-[5in] overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer flex flex-col bg-white"
+          className="group relative w-[7in] h-[5in] overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer bg-white"
           onClick={() => handleRoomClick(room.title)}
         >
-          <div className="relative" style={{height: '80%'}}>
+          <div className="relative h-full">
             <img
               src={room.imageUrl}
               alt={room.title}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              style={{ display: 'block', height: '100%' }}
             />
-          </div>
-          <div className="text-center bg-white flex items-center justify-center py-2">
-            <h3 className="font-serif text-lg text-black font-medium tracking-wide">
-              {room.title}
-            </h3>
           </div>
         </Card>
       ))}
@@ -242,10 +236,23 @@ We manage sourcing and installation for a seamless transformation of your space.
       <p className="text-[#6A6A6A] mb-8">
         Schedule a consultation with our design experts and take the first step toward creating your dream home.
       </p>
-      <a href="https://wa.me/919845526046" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/916364470031" target="_blank" rel="noopener noreferrer">
         <Button className="bg-[#C0A080] hover:bg-[#B09070] text-white px-6 py-5 text-base !rounded-button whitespace-nowrap cursor-pointer">
           Click for Whatsapp Consultation
-        </Button>
+         </Button>
+      <p className="text-[#6A6A6A] mb-8">
+        <span className="font-bold">Address:</span> <span className="font-bold">Rajesh</span>, New survey no.217/3, Situated at Bidarahalli village, Bidarahalli Hobli Bangalore East Taluk 560049
+        <br />
+        <a
+          href="https://maps.app.goo.gl/ruYpqSCvDgFuC5QP8"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: 'black', textDecoration: 'underline' }}
+        >
+          Google Map Link
+        </a>
+      </p>
+      
       </a>
     </div>
   </div>
