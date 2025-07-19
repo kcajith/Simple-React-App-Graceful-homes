@@ -6,14 +6,14 @@ import { Dialog, DialogContent } from "../components/ui/dialog";
 import livingRoomImage from './assets/Living-1.jpg';
 import bedRoomImage from './assets/Bedroom-1.jpg';
 import kitchenImage from './assets/Kitchen-1.jpg';
-import bathroomImage from './assets/Bathroom-1.jpg';
+// import bathroomImage from './assets/Bathroom-1.jpg';
 import livingGallery1 from './assets/Living Gallery/WhatsApp Image 2025-06-28 at 12.14.46.jpeg';
 import livingGallery2 from './assets/Living Gallery/WhatsApp Image 2025-06-28 at 12.14.47.jpeg';
 import livingGallery3 from './assets/Living Gallery/WhatsApp Image 2025-06-28 at 12.14.48.jpeg';
 import living1Image from './assets/Living-2.jpg';
 import living2Image from './assets/Living-3.jpg';
 import kitchen1Image from './assets/Kitchen-2.jpg';
-import kitchen2Image from './assets/Kitchen-3.jpg';
+// import kitchen2Image from './assets/Kitchen-3.jpg';
 
 const App: React.FC = () => {
 const [showGallery, setShowGallery] = useState(false);
